@@ -7,7 +7,7 @@ export default function Introduction() {
       <div className="grid items-center gap-12 lg:grid-cols-[1.04fr_.96fr] lg:gap-20">
         <div className="relative order-2 aspect-[5/4] overflow-hidden rounded-tl-[5rem] rounded-br-[5rem] rounded-tr-2xl rounded-bl-2xl shadow-card lg:order-1">
           <PhotoFrame slot={images.introduction} className="rounded-tl-[5rem] rounded-br-[5rem] rounded-tr-2xl rounded-bl-2xl" />
-          <div className="absolute bottom-0 left-0 bg-primary px-6 py-5 text-cream sm:px-8"><p className="font-display text-xl">Care, with time to listen.</p></div>
+          <div className="pointer-events-none absolute bottom-0 left-0 bg-primary px-6 py-5 text-cream sm:px-8"><p className="font-display text-xl">Care, with time to listen.</p></div>
         </div>
         <div className="order-1 lg:order-2">
           <p className="font-body text-xs font-medium uppercase tracking-[0.18em] text-warm">About Vatsalya</p>

@@ -22,10 +22,9 @@ export default function ParentResources() {
 
           <div className="mt-9 flex flex-col divide-y divide-primary/10 rounded-card border border-primary/8 bg-cream shadow-card">
             {parentResources.map((r) => (
-              <a
+              <div
                 key={r.title}
-                href="#contact"
-                className="group flex items-center justify-between gap-4 px-6 py-5 transition-colors hover:bg-canvasWarm/60"
+                className="flex items-center justify-between gap-4 px-6 py-5"
               >
                 <div>
                   <span className="font-body text-[13px] font-medium text-warm">
@@ -34,21 +33,12 @@ export default function ParentResources() {
                   <p className="mt-1 font-display text-[17px] text-primary">{r.title}</p>
                   <p className="mr mt-0.5 text-[13.5px] text-ink/55">{r.titleMr}</p>
                 </div>
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="shrink-0 text-primary/50 transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                >
-                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
+                <span className="shrink-0 text-xs text-primary/45">Information</span>
+              </div>
             ))}
           </div>
           <p className="mt-4 font-body text-[13px] text-ink/50">
-            All guidance is reviewed by our medical team before publication.
+            These topics are general information prompts. For advice about your child, contact a qualified clinician.
           </p>
         </div>
       </div>

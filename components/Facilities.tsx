@@ -45,7 +45,7 @@ export default function Facilities() {
               className="transition-transform duration-700 group-hover:scale-105"
               sizes="(min-width: 1024px) 33vw, 50vw"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/80 via-primary/0 to-primary/0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/80 via-primary/0 to-primary/0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <p className="font-body text-[13px] text-cream">{item.label}</p>
               <p className="mr text-[12px] text-cream/80">{item.labelMr}</p>
             </div>

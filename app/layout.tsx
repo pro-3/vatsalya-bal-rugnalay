@@ -8,9 +8,9 @@ const notoSerifMr = Noto_Serif_Devanagari({ subsets: ["devanagari"], variable: "
 const notoSansMr = Noto_Sans_Devanagari({ subsets: ["devanagari"], variable: "--font-noto-sans-mr", weight: ["400", "500"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Vatsalya Bal Rugnalay | Pediatric Care in Karanja, Washim",
-  description: "Vatsalya Bal Rugnalay provides pediatric care, child wellness, vaccination, critical-care support and skin-care services in Karanja, Washim, Maharashtra.",
-  openGraph: { title: "Vatsalya Bal Rugnalay", description: "Pediatric care in Karanja, Washim, Maharashtra.", type: "website", locale: "en_IN" },
+  title: "Vatsalya Bal Rugnalay | Pediatric Care in Karanja Lad, Washim",
+  description: "Vatsalya Bal Rugnalay provides pediatric care, child wellness, vaccination, critical-care support and skin-care services in Karanja Lad, Washim, Maharashtra.",
+  openGraph: { title: "Vatsalya Bal Rugnalay", description: "Pediatric care in Karanja Lad, Washim, Maharashtra.", type: "website", locale: "en_IN" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

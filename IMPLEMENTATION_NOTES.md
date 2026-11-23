@@ -36,3 +36,10 @@ If the files are absent, the existing PhotoFrame component displays its fallback
 - Confirm the Google Maps pin and address.
 - Confirm which skin-care services are currently offered. The page includes a notice to contact the clinic to confirm availability, but the list itself should still be reviewed by the clinic.
 - Replace Unsplash placeholders for hospital facilities with actual hospital photographs where possible.
+
+
+## Google Maps location
+
+- The Contact section now embeds a Google Maps view using the address shown in the verified Google Business Profile: Gayatri Nagar, behind Mahesh Bhavan, Shivaji Nagar, Karanja Lad, Maharashtra 444105.
+- The "Open in Google Maps" action uses the exact share link supplied by the business owner: https://share.google/JRAc1H4l4kCQcPQkj
+- If the business owner later copies the dedicated Google Maps "Embed a map" URL from the listing, replace `hospital.mapEmbedHref` in `lib/content.ts` with that URL for a listing-specific iframe.

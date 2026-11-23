@@ -3,10 +3,13 @@ export const hospital = {
   name: "Vatsalya Bal Rugnalay", nameMr: "वात्सल्य बाल रुग्णालय",
   tagline: "Caring for little lives, every day.", taglineMr: "आपल्या मुलांच्या आरोग्यासाठी प्रेमळ आणि विश्वासू काळजी.",
   phoneDisplay: "+91 91584 26955", phoneHref: "tel:+919158426955", whatsappHref: "https://wa.me/919158426955",
-  address: "Karanja Lad, Washim, Maharashtra", addressMr: "कारंजा लाड, वाशिम, महाराष्ट्र",
-  mapsHref: "https://maps.google.com/?q=Vatsalya+Bal+Rugnalay+Karanja+Lad+Washim",
+  address: "Gayatri Nagar, behind Mahesh Bhavan, Shivaji Nagar, Karanja Lad, Washim, Maharashtra 444105, India", addressMr: "गायत्री नगर, महेश भवनच्या मागे, शिवाजी नगर, कारंजा लाड, वाशिम, महाराष्ट्र ४४४१०५",
+  // Official Google Business Profile share link supplied by the hospital owner.
+  mapsHref: "https://share.google/JRAc1H4l4kCQcPQkj",
+  // Exact Google Maps Embed a map URL supplied for the verified hospital listing.
+  mapEmbedHref: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1030.6101658446605!2d77.48331128390633!3d20.48458996892306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd137532ad20007%3A0xf8615727d79933c4!2sVatsalya%20Bal%20Rugnalay!5e0!3m2!1sen!2sin!4v1795455255626!5m2!1sen!2sin",
 };
-export const nav = [{ label:"Home",href:"#home" },{ label:"About",href:"#about" },{ label:"Services",href:"#services" },{ label:"Doctors",href:"#doctors" },{ label:"Facilities",href:"#facilities" },{ label:"Skin Care",href:"#skin-care" },{ label:"Contact",href:"#contact" }];
+export const nav = [{ label:"Home",href:"/" },{ label:"About",href:"/#about" },{ label:"Child Care",href:"/child-care-karanja-lad" },{ label:"Doctors",href:"/#doctors" },{ label:"Facilities",href:"/#facilities" },{ label:"Skin Care",href:"/skin-care-karanja-lad" },{ label:"Contact",href:"/contact" }];
 export const trustStrip = [{en:"Pediatric Care",mr:"बालरोग सेवा"},{en:"Child Wellness",mr:"बाल आरोग्य"},{en:"Vaccination",mr:"लसीकरण"},{en:"NICU & Critical Care",mr:"अतिदक्षता सेवा"},{en:"Skin Care",mr:"त्वचा सेवा"}];
 export const services = [
   {en:"Pediatric Care",mr:"बालरोग सेवा",desc:"Care and guidance for children and their families.",icon:"stethoscope"},
@@ -33,6 +36,15 @@ export const doctors = {
     roleMr: "जनरल फिजिशियन व कॉस्मेटोलॉजिस्ट",
   },
 };
-export const facilityImages = [{key:"exterior",label:"Hospital exterior",labelMr:"रुग्णालयाचे बाह्य दृश्य"},{key:"reception",label:"Reception",labelMr:"स्वागत कक्ष"},{key:"patient-room",label:"Patient rooms",labelMr:"रुग्ण कक्ष"},{key:"nicu",label:"NICU",labelMr:"नवजात अतिदक्षता विभाग"},{key:"equipment",label:"Medical equipment",labelMr:"वैद्यकीय उपकरणे"},{key:"care",label:"Child-care areas",labelMr:"बालसंगोपन कक्ष"}];
+export const facilityImages = [
+  {key:"exterior",label:"Hospital exterior",labelMr:"रुग्णालयाचे बाह्य दृश्य"},
+  {key:"approach",label:"Street approach",labelMr:"रुग्णालयाकडे जाणारा रस्ता"},
+  {key:"reception",label:"Reception & waiting area",labelMr:"स्वागत व प्रतीक्षा कक्ष"},
+  {key:"corridor",label:"Interior corridor",labelMr:"रुग्णालयातील अंतर्गत मार्ग"},
+  {key:"patient-room",label:"Patient room",labelMr:"रुग्ण कक्ष"},
+  {key:"ward-room",label:"Ward room",labelMr:"वॉर्ड कक्ष"},
+  {key:"care-room",label:"Care room",labelMr:"देखभाल कक्ष"},
+  {key:"examination-room",label:"Examination room",labelMr:"तपासणी कक्ष"},
+];
 export const skinServices = ["Skin care","Acne & pimples","Allergies","Pigmentation","Dark circles","Hair fall & dandruff care","PRP","Chemical peeling","Omega light therapy","Microneedling","RF cautery","Microdermabrasion"];
 export const parentResources = [{title:"Recognising a fever that needs a doctor",titleMr:"डॉक्टरांची गरज असलेला ताप कसा ओळखावा",tag:"Fever guidance"},{title:"A simple guide to your child’s vaccination schedule",titleMr:"बालकांच्या लसीकरण वेळापत्रकाबद्दल मार्गदर्शन",tag:"Vaccination"},{title:"Building good nutrition habits early",titleMr:"लहान वयातच चांगल्या पोषण सवयी",tag:"Nutrition"},{title:"Common childhood illnesses, explained calmly",titleMr:"लहान मुलांचे सामान्य आजार — सोप्या भाषेत",tag:"Illness care"},{title:"Living well with childhood asthma",titleMr:"बालदम्यासोबत निरोगी जीवनशैली",tag:"Asthma"},{title:"What’s typical at each stage of development",titleMr:"प्रत्येक वयोगटातील सामान्य वाढ व विकास",tag:"Development"}];

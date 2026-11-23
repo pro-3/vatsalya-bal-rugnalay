@@ -1,4 +1,5 @@
 import { doctors, hospital, skinServices } from "@/lib/content";
+import Link from "next/link";
 import { images } from "@/lib/images";
 import PhotoFrame from "./PhotoFrame";
 
@@ -26,8 +27,8 @@ export default function SkinCare() {
             <p className="mt-5 text-xs leading-relaxed text-cream/60">Please contact the clinic to confirm current treatment availability and suitability.</p>
             <a href={hospital.whatsappHref} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex rounded-pill bg-gold px-7 py-3.5 font-body text-[15px] text-primary shadow-soft transition-transform hover:-translate-y-0.5">WhatsApp</a>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl shadow-soft">
-            <PhotoFrame slot={images.skinCare} className="rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl" />
+          <div className="relative aspect-[4/5] overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl bg-cream/10 shadow-soft">
+            <PhotoFrame slot={images.skinCare} className="rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl" sizes="(min-width: 1024px) 42vw, 100vw" />
           </div>
         </div>
 
@@ -41,6 +42,7 @@ export default function SkinCare() {
             <p className="mt-3 font-body text-sm font-medium text-gold">{doctor.qualification}</p>
             <p className="mt-1 font-display text-xl text-cream">{doctor.role}</p>
             <p className="mr mt-1 text-sm text-cream/70">{doctor.roleMr}</p>
+            <Link href="/doctors/dr-nikita-chavhan" className="mt-5 inline-flex font-body text-sm font-medium text-gold hover:text-cream">View profile →</Link>
           </div>
         </div>
       </div>

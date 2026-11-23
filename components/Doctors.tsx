@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { doctors, hospital } from "@/lib/content";
 import { images } from "@/lib/images";
 import PhotoFrame from "./PhotoFrame";
@@ -23,6 +24,7 @@ export default function Doctors() {
           <div className="mt-10 border-l border-warm pl-5">
             <p className="font-body text-[16px] leading-relaxed text-ink/75">For information about pediatric care and available services, contact the hospital team.</p>
           </div>
+          <Link href="/doctors/dr-nilesh-chavhan" className="mt-6 inline-flex font-body text-sm font-medium text-warm hover:text-primary">View profile →</Link>
           <a href={hospital.whatsappHref} target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex rounded-pill border border-primary/25 px-6 py-3 font-body text-[15px] text-primary transition-colors hover:bg-primary hover:text-cream">WhatsApp</a>
         </div>
       </div>

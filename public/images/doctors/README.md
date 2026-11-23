@@ -1,8 +1,12 @@
-# Doctor photographs
+# Original doctor portraits
 
-Add the original, approved doctor photographs to this folder using these exact filenames:
+The uploaded ZIP contained hospital exterior and interior photographs, but no original doctor headshots. Add the genuine, approved portraits using these exact filenames:
 
-- `dr-nilesh-chavhan.jpg` — Dr. Nilesh Chavhan (MBBS, MD; Child Specialist)
-- `dr-nikita-chavhan.jpg` — Dr. Nikita Chavhan (Pawar) (BAMS (MUHS); General Physician & Cosmetologist)
+- `dr-nilesh-chavhan.jpg`
+- `dr-nikita-chavhan.jpg`
 
-Do not use stock photos or AI-generated portraits as doctor photographs. Recommended: portrait orientation, clear face, good lighting, high resolution. Keep the exact filenames and JPG extension.
+Full paths:
+- `public/images/doctors/dr-nilesh-chavhan.jpg`
+- `public/images/doctors/dr-nikita-chavhan.jpg`
+
+Do not use a hospital-room photo, signboard, poster image, or stock portrait as a doctor's photograph.

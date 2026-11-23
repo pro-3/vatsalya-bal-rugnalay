@@ -1,6 +1,4 @@
 import { hospital } from "@/lib/content";
-import { images } from "@/lib/images";
-import PhotoFrame from "./PhotoFrame";
 
 export default function Contact() {
   return (
@@ -75,8 +73,31 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl shadow-card">
-          <PhotoFrame slot={images.contact} className="rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl" />
+        <div className="overflow-hidden rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-2xl rounded-bl-2xl border border-primary/10 bg-white shadow-card">
+          <div className="relative aspect-[4/3] min-h-[280px] w-full bg-[#e9eef0] sm:min-h-[360px]">
+            <iframe
+              title="Vatsalya Bal Rugnalay location on Google Maps"
+              src={hospital.mapEmbedHref}
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+          <div className="flex flex-col gap-2 p-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+            <div>
+              <p className="font-display text-lg text-primary">View the hospital location</p>
+              <p className="mr mt-1 text-sm text-ink/60">नकाशावर स्थान पाहा आणि मार्ग मिळवा</p>
+            </div>
+            <a
+              href={hospital.mapsHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit items-center justify-center rounded-pill bg-primary px-5 py-3 font-body text-sm text-cream transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warm"
+            >
+              Open in Google Maps ↗
+            </a>
+          </div>
         </div>
       </div>
     </section>

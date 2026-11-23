@@ -8,9 +8,15 @@ const notoSerifMr = Noto_Serif_Devanagari({ subsets: ["devanagari"], variable: "
 const notoSansMr = Noto_Sans_Devanagari({ subsets: ["devanagari"], variable: "--font-noto-sans-mr", weight: ["400", "500"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Vatsalya Bal Rugnalay | Pediatric Care in Karanja Lad, Washim",
-  description: "Vatsalya Bal Rugnalay provides pediatric care, child wellness, vaccination, critical-care support and skin-care services in Karanja Lad, Washim, Maharashtra.",
-  openGraph: { title: "Vatsalya Bal Rugnalay", description: "Pediatric care in Karanja Lad, Washim, Maharashtra.", type: "website", locale: "en_IN" },
+  metadataBase: new URL("https://vatsalya-bal-rugnalay.vercel.app"),
+  title: { default: "Vatsalya Bal Rugnalay | Child Care in Karanja Lad", template: "%s | Vatsalya Bal Rugnalay" },
+  description: "Child-focused care and skin-care consultation in Karanja Lad, Washim, Maharashtra. Call Vatsalya Bal Rugnalay at +91 91584 26955.",
+  applicationName: "Vatsalya Bal Rugnalay",
+  alternates: { canonical: "/" },
+  openGraph: { title: "Vatsalya Bal Rugnalay | Child Care in Karanja Lad", description: "Child-focused care and skin-care consultation in Karanja Lad, Washim.", type: "website", locale: "en_IN", url: "/", siteName: "Vatsalya Bal Rugnalay", images: [{ url: "/images/herobg.jpg", width: 1600, height: 900, alt: "Vatsalya Bal Rugnalay in Karanja Lad" }] },
+  twitter: { card: "summary_large_image", title: "Vatsalya Bal Rugnalay | Child Care in Karanja Lad", description: "Child-focused care and skin-care consultation in Karanja Lad, Washim.", images: ["/images/herobg.jpg"] },
+  icons: { icon: "/images/vatsalya-logo-mark.png", apple: "/images/vatsalya-logo-mark.png" },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

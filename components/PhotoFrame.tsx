@@ -16,32 +16,21 @@ export default function PhotoFrame({
   priority?: boolean;
   sizes?: string;
 }) {
-  const [src, setSrc] = useState(slot.src);
-  const [usingFallback, setUsingFallback] = useState(false);
   const [failed, setFailed] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const closeLightbox = useCallback(() => setIsOpen(false), []);
 
-  const handleImageError = () => {
-    if (slot.fallbackSrc && !usingFallback) {
-      setUsingFallback(true);
-      setSrc(slot.fallbackSrc);
-      return;
-    }
-    setFailed(true);
-  };
-
   if (failed) {
     return (
-      <div
-        className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br from-secondary/25 via-canvasWarm to-warm/20 text-center ${className}`}
-      >
+      <div className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br from-secondary/25 via-canvasWarm to-warm/20 text-center ${className}`}>
         <span className="px-6 font-body text-sm text-primary/70">
-          Photo to be added: {slot.localFile}
+          Original photo to be added: {slot.localFile}
         </span>
       </div>
     );
   }
+
+  const fitClass = slot.fit === "contain" ? "object-contain" : "object-cover";
 
   return (
     <>
@@ -53,19 +42,21 @@ export default function PhotoFrame({
         className="group/photo absolute inset-0 z-10 block h-full w-full cursor-zoom-in overflow-hidden text-left focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-[-4px] focus-visible:outline-gold"
       >
         <Image
-          src={src}
+          src={slot.src}
           alt={slot.alt}
           fill
           sizes={sizes}
           priority={priority}
-          className={`object-cover ${className}`}
-          onError={handleImageError}
+          quality={86}
+          className={`${fitClass} ${className}`}
+          style={{ objectPosition: slot.objectPosition ?? "center" }}
+          onError={() => setFailed(true)}
         />
         <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-primary/75 px-3 py-1.5 font-body text-[11px] font-medium text-white opacity-75 shadow-sm transition-opacity sm:opacity-0 group-hover/photo:opacity-100 group-focus-visible/photo:opacity-100">
           View photo ↗
         </span>
       </button>
-      {isOpen && <ImageLightbox src={src} alt={slot.alt} onClose={closeLightbox} />}
+      {isOpen && <ImageLightbox src={slot.src} alt={slot.alt} onClose={closeLightbox} />}
     </>
   );
 }

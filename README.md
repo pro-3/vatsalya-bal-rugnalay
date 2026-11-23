@@ -1,61 +1,45 @@
 # Vatsalya Bal Rugnalay — Website
 
-Next.js 14 (App Router) + TypeScript + Tailwind CSS site for Vatsalya Bal
-Rugnalay, a children's hospital in Karanja Lad, Maharashtra. Bilingual
-(English + Marathi) throughout.
+Next.js 14 (App Router), TypeScript and Tailwind CSS website for Vatsalya Bal Rugnalay in Karanja Lad, Washim, Maharashtra. The site supports English and Marathi content.
 
-## Getting started
+## Local development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open http://localhost:3000.
+Open http://localhost:3000.
 
-## Before you launch
+## Photo assets
 
-1. **Add original doctor photographs.** Copy `dr-nilesh-chavhan.jpg` and
-   `dr-nikita-chavhan.jpg` into `public/images/doctors/`. See that folder's
-   README for the exact paths. Until then, the page displays labelled fallbacks.
-2. **Replace stock hospital photography.** See `public/images/README.md` for
-   the remaining image slots and filenames. Do not present stock images as the
-   actual hospital or its staff.
-3. **Verify clinical content.** Confirm doctor details, service availability,
-   and all medical copy with the hospital before publishing.
-4. **Check the contact and map links.** The phone number is configured in
-   `lib/content.ts`; confirm that the supplied number is the hospital's active
-   call and WhatsApp number and that the map pin is correct.
-5. **Never add pricing or a booking form** unless the client explicitly changes
-   the original requirement.
+The hospital photographs from the latest WhatsApp ZIP have been renamed, optimized and added under `public/images/`. See `public/images/README.md` and `PHOTO_ASSET_CHECKLIST.md` for exact image paths and the original-to-website filename mapping.
+
+The original doctor headshots were not present in that ZIP. Add the verified portraits using these exact paths:
+
+- `public/images/doctors/dr-nilesh-chavhan.jpg`
+- `public/images/doctors/dr-nikita-chavhan.jpg`
+
+Do not use stock portraits or hospital/interior photos as doctor photographs. All displayed photos can be clicked to open the full-screen viewer. Image cards use portrait-friendly ratios and responsive image sizing for phones, laptops and larger displays.
+
+## Before deployment
+
+1. Confirm that the two doctor portraits are the correct original photographs.
+2. Verify the Skin Care signboard image, because it contains service and qualification text that should be current and approved.
+3. Confirm doctor details and clinical service information with the hospital.
+4. Confirm that `9158426955` is the hospital's active phone and WhatsApp number.
+5. Check the Google Maps embed and directions pin.
+6. Do not publish identifiable patient/visitor/staff images without hospital approval and any required consent.
+7. No prices or appointment-booking form are included.
 
 ## Project structure
 
+```text
+app/                  Next.js App Router
+components/            Homepage sections and photo viewer
+lib/content.ts         Hospital copy, phone/address and Google Maps URL
+lib/images.ts          Central map of website image slots
+public/images/         Optimized hospital photos and logo
 ```
-app/                Next.js app router (layout, page, global styles)
-components/          One component per homepage section
-lib/content.ts       All bilingual copy in one place
-lib/images.ts         Every photo slot, keyed by name
-public/images/        Where real photography goes (see README there)
-```
 
-## Design tokens
-
-Colors, type families and border-radius scale are defined in
-`tailwind.config.ts` and follow the palette in the original design
-specification (`Chavhan_Children_Hospital_Website_Design.md`):
-
-- Background `#F7F5F0`, Primary `#173B57`, Secondary `#6FA9B8`,
-  Warm accent `#C47A5A`, Gold accent `#D9B56D`
-- Display type: Fraunces (English) / Noto Serif Devanagari (Marathi)
-- Body type: Work Sans (English) / Noto Sans Devanagari (Marathi)
-
-## What's intentionally missing
-
-Per the brief: no treatment/consultation/room pricing anywhere, no
-appointment booking form, no invented statistics or testimonials.
-
-
-## Photo assets and click-to-open viewer
-
-See `public/images/README.md` for the complete filename checklist. All site photographs open in a full-screen viewer when clicked. Add original photos under the exact documented names; doctor portraits have no stock-photo fallback. The hospital logo is included at `public/images/vatsalya-logo-mark.png` and appears in the header.
+The hospital logo is included at `public/images/vatsalya-logo-mark.png` and is already used in the website header. Desktop and mobile hero images remain separate to preserve their respective compositions.

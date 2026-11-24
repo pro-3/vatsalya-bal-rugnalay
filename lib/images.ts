@@ -8,6 +8,7 @@ export type ImageSlot = {
   localFile: string;
   fit?: "cover" | "contain";
   objectPosition?: string;
+  placeholder?: boolean;
 };
 
 export const heroImages = {
@@ -35,12 +36,14 @@ export const images: Record<string, ImageSlot> = {
     alt: "Official portrait of Dr. Nilesh Chavhan",
     localFile: "doctors/dr-nilesh-chavhan.jpg",
     fit: "contain",
+    placeholder: true,
   },
   doctorNikita: {
     src: "/images/doctors/dr-nikita-chavhan.jpg",
     alt: "Official portrait of Dr. Nikita Chavhan (Pawar)",
     localFile: "doctors/dr-nikita-chavhan.jpg",
     fit: "contain",
+    placeholder: true,
   },
   skinCare: {
     src: "/images/skin-care.jpg",

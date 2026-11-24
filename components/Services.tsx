@@ -44,21 +44,68 @@ export default function Services() {
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6">
-          {services.map((s, index) => (
-            <div
-              key={s.en}
-              className={`group rounded-card border border-primary/8 bg-cream p-7 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft lg:col-span-4 ${index === 0 ? "lg:col-span-7 lg:p-9" : ""} ${index === 1 ? "lg:col-span-5 lg:bg-primary lg:text-cream" : ""} ${index === 5 ? "lg:col-span-5" : ""} ${index === 6 ? "lg:col-span-7" : ""}`}
-            >
-              <span className={`flex h-12 w-12 items-center justify-center rounded-2xl transition-colors ${index === 1 ? "bg-cream/15 text-cream" : "bg-primary/8 text-primary group-hover:bg-primary group-hover:text-cream"}`}>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  {paths[s.icon]}
-                </svg>
-              </span>
-              <h3 className={`mt-5 font-display text-xl ${index === 1 ? "text-cream" : "text-primary"}`}>{s.en}</h3>
-              <p className={`mr mt-1 text-[14px] ${index === 1 ? "text-cream/65" : "text-ink/60"}`}>{s.mr}</p>
-              <p className={`mt-3 font-body text-[14.5px] leading-relaxed ${index === 1 ? "text-cream/75" : "text-ink/70"}`}>{s.desc}</p>
-            </div>
-          ))}
+          
+          {services.map((s, index) => {
+            const featured = index === 1;
+
+            return (
+              <div
+                key={s.en}
+                className={`group rounded-card border border-primary/8 bg-cream p-7 text-primary shadow-card transition-all hover:-translate-y-1 hover:shadow-soft lg:col-span-4
+                  ${index === 0 ? "lg:col-span-7 lg:p-9" : ""}
+                  ${featured ? "lg:col-span-5 lg:bg-primary lg:text-cream" : ""}
+                  ${index === 5 ? "lg:col-span-5" : ""}
+                  ${index === 6 ? "lg:col-span-7" : ""}`}
+              >
+                <span
+                  className={`flex h-12 w-12 items-center justify-center rounded-2xl transition-colors ${
+                    featured
+                      ? "bg-primary/8 text-primary lg:bg-cream/15 lg:text-cream"
+                      : "bg-primary/8 text-primary group-hover:bg-primary group-hover:text-cream"
+                  }`}
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    {paths[s.icon] ?? null}
+                  </svg>
+                </span>
+
+                <h3
+                  className={`mt-5 font-display text-xl ${
+                    featured ? "text-primary lg:text-cream" : "text-primary"
+                  }`}
+                >
+                  {s.en}
+                </h3>
+
+                <p
+                  className={`mr mt-1 text-[14px] ${
+                    featured
+                      ? "text-ink/60 lg:text-cream/65"
+                      : "text-ink/60"
+                  }`}
+                >
+                  {s.mr}
+                </p>
+
+                <p
+                  className={`mt-3 font-body text-[14.5px] leading-relaxed ${
+                    featured
+                      ? "text-ink/70 lg:text-cream/75"
+                      : "text-ink/70"
+                  }`}
+                >
+                  {s.desc}
+                </p>
+              </div>
+            );
+          })}
+
         </div>
       </div>
     </section>

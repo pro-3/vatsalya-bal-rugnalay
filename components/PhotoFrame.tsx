@@ -20,7 +20,7 @@ export default function PhotoFrame({
   const [isOpen, setIsOpen] = useState(false);
   const closeLightbox = useCallback(() => setIsOpen(false), []);
 
-  if (failed) {
+  if (failed || slot.placeholder) {
     return (
       <div className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br from-secondary/25 via-canvasWarm to-warm/20 text-center ${className}`}>
         <span className="px-6 font-body text-sm text-primary/70">

@@ -16,7 +16,7 @@ No search-volume or ranking data is asserted here.
 
 ## Measurement setup
 
-1. Verify the production domain in Google Search Console, then submit `https://vatsalya-bal-rugnalay.vercel.app/sitemap.xml`.
+1. Verify the production domain in Google Search Console, then submit `https://vatsalyabalrugnalay.in/sitemap.xml`.
 2. Use URL Inspection for the homepage and each new canonical URL after deployment; request indexing only when the public page is final.
 3. Create or connect a GA4 property through the approved analytics implementation. Do not add an ID until one is supplied.
 4. In GA4, configure click events for `tel:+919158426955`, `https://wa.me/919158426955`, and the verified Google Maps directions link. Mark appropriate contact events as conversions after owner approval.

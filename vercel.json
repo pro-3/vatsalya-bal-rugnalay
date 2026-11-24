@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "vatsalya-bal-rugnalay.vercel.app"
+        }
+      ],
+      "destination": "https://vatsalyabalrugnalay.in/:path*",
+      "permanent": true
+    }
+  ]
+}

@@ -8,7 +8,7 @@ const notoSerifMr = Noto_Serif_Devanagari({ subsets: ["devanagari"], variable: "
 const notoSansMr = Noto_Sans_Devanagari({ subsets: ["devanagari"], variable: "--font-noto-sans-mr", weight: ["400", "500"], display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vatsalya-bal-rugnalay.vercel.app"),
+  metadataBase: new URL("https://vatsalyabalrugnalay.in"),
   title: { default: "Vatsalya Bal Rugnalay | Child Care in Karanja Lad", template: "%s | Vatsalya Bal Rugnalay" },
   description: "Child-focused care and skin-care consultation in Karanja Lad, Washim, Maharashtra. Call Vatsalya Bal Rugnalay at +91 91584 26955.",
   applicationName: "Vatsalya Bal Rugnalay",

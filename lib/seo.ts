@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const siteUrl = "https://vatsalya-bal-rugnalay.vercel.app";
+export const siteUrl = "https://vatsalyabalrugnalay.in";
 export const mapUrl = "https://share.google/JRAc1H4l4kCQcPQkj";
 
 type PageSeo = { title: string; description: string; path: string; image?: string };

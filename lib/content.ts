@@ -5,7 +5,8 @@ export const hospital = {
   phoneDisplay: "+91 91584 26955", phoneHref: "tel:+919158426955", whatsappHref: "https://wa.me/919158426955",
   address: "Gayatri Nagar, behind Mahesh Bhavan, Shivaji Nagar, Karanja Lad, Washim, Maharashtra 444105, India", addressMr: "गायत्री नगर, महेश भवनच्या मागे, शिवाजी नगर, कारंजा लाड, वाशिम, महाराष्ट्र ४४४१०५",
   // Official Google Business Profile share link supplied by the hospital owner.
-  mapsHref: "https://share.google/JRAc1H4l4kCQcPQkj",
+  mapsHref:
+  "https://www.google.com/maps/dir/?api=1&destination=20.48458996892306%2C77.48331128390633&travelmode=driving",
   // Exact Google Maps Embed a map URL supplied for the verified hospital listing.
   mapEmbedHref: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1030.6101658446605!2d77.48331128390633!3d20.48458996892306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd137532ad20007%3A0xf8615727d79933c4!2sVatsalya%20Bal%20Rugnalay!5e0!3m2!1sen!2sin!4v1795455255626!5m2!1sen!2sin",
 };

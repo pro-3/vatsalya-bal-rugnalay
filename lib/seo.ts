@@ -36,6 +36,16 @@ export function hospitalSchema() {
   };
 }
 
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Vatsalya Bal Rugnalay",
+    alternateName: "वात्सल्य बाल रुग्णालय",
+    url: `${siteUrl}/`,
+  };
+}
+
 export function personSchema(name: string, description: string, path: string, credentials: string) {
   return {
     "@context": "https://schema.org",

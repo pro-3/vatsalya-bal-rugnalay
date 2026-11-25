@@ -15,7 +15,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: { title: "Vatsalya Bal Rugnalay | Child Care in Karanja Lad", description: "Child-focused care and skin-care consultation in Karanja Lad, Washim.", type: "website", locale: "en_IN", url: "/", siteName: "Vatsalya Bal Rugnalay", images: [{ url: "/images/herobg.jpg", width: 1600, height: 900, alt: "Vatsalya Bal Rugnalay in Karanja Lad" }] },
   twitter: { card: "summary_large_image", title: "Vatsalya Bal Rugnalay | Child Care in Karanja Lad", description: "Child-focused care and skin-care consultation in Karanja Lad, Washim.", images: ["/images/herobg.jpg"] },
-  icons: { icon: "/images/vatsalya-logo-mark.png", apple: "/images/vatsalya-logo-mark.png" },
+  icons: {
+    icon: [
+      {
+        url: "/images/vatsalya-logo-mark.png",
+        type: "image/png",
+      },
+    ],
+    apple: "/images/vatsalya-logo-mark.png",
+  },
   robots: { index: true, follow: true },
 };
 

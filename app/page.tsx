@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
-import { hospitalSchema, pageMetadata } from "@/lib/seo";
+import { hospitalSchema, pageMetadata, websiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Vatsalya Bal Rugnalay | Child Care in Karanja Lad",
@@ -25,6 +25,7 @@ export default function Home() {
   return (
     <>
       <JsonLd data={hospitalSchema()} />
+      <JsonLd data={websiteSchema()} />
       <Header />
       <main className="pb-20 lg:pb-0">
         <Hero />

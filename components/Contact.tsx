@@ -62,14 +62,6 @@ export default function Contact() {
             >
               WhatsApp
             </a>
-            <a
-              href={hospital.mapsHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-pill border border-primary/25 px-7 py-3.5 font-body text-[15px] text-primary transition-colors hover:bg-primary hover:text-cream"
-            >
-              Get Directions
-            </a>
           </div>
         </div>
 
@@ -89,14 +81,6 @@ export default function Contact() {
               <p className="font-display text-lg text-primary">View the hospital location</p>
               <p className="mr mt-1 text-sm text-ink/60">नकाशावर स्थान पाहा आणि मार्ग मिळवा</p>
             </div>
-            <a
-              href={hospital.mapsHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-fit items-center justify-center rounded-pill bg-primary px-5 py-3 font-body text-sm text-cream transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warm"
-            >
-              Open in Google Maps ↗
-            </a>
           </div>
         </div>
       </div>
